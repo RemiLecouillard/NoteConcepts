@@ -1,22 +1,17 @@
-import logo from './logo.svg';
+import star from './star.svg';
 import './App.css';
+import GradeCard from './components/GradeCard/GradeCard.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={star} className="App-logo" alt="logo" />
+        <div>
+          <GradeCard concept="La vie" description="la chose qu'on est en vie" image_url="https://www.pourquoidocteur.fr/media/article/thunbs/uploded_reprise-vie-en-main-(cp---antonioguillem)-1598536855.jpg"/>
+          <GradeCard concept="l'entropie" description="le truc qui fait que ça se mélange" image_url="https://149366099.v2.pressablecdn.com/wp-content/uploads/2018/11/Entropy.png"/>
+          <GradeCard concept="Le football" description="le sport de Zidane"/>
+        </div>
       </header>
     </div>
   );
