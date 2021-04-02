@@ -1,10 +1,10 @@
 # FRONT TRUCS
 
-## How to run on localhost
+## How to install the good stuff
 
-* `make init` (une seule fois)
-* `npm start`
-
+* [Télécharger NodeJS](https://nodejs.org/download/release/latest/node-v15.13.0-x64.msi)
+* `npm install react react-dom`
+* To test go to README in `app`
 
 ## Roadmap front
 
