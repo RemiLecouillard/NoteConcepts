@@ -2,11 +2,33 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import NavBar from './components/NavBar/NavBar';
+import FabAddButton from './components/FabButton/FabAddButton';
 import reportWebVitals from './reportWebVitals';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      // Purple and green play nicely together.
+      main: '#EEC200',
+    },
+    secondary: {
+      // This is green.A700 as hex.
+      main: '#A48F5C',
+      light: '#FFEFCA',
+    },
+  },
+})
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <NavBar/>
+      <App />
+      <FabAddButton/>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
