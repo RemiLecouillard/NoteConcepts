@@ -1,6 +1,7 @@
 package org.noteconcepts.controller;
 
 import org.noteconcepts.model.Concept;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,7 +21,7 @@ public class ConceptController {
             new Concept("L'anarchisme'", "Quand on refuse toute forme de subordination"),
 
     };
-
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping
     public @ResponseBody Concept[] getConcepts() {
         return _conceptsMock;

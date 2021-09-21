@@ -38,15 +38,18 @@ export async function get(url){
 //   })
 // }
 
-export const sendRequest = (method,url) => {
+export const sendRequest = (method,url,body) => {
   const promise = new Promise((resolve,reject) => {
     const xhr = new XMLHttpRequest();
     xhr.open(method,url);
+    // xhr.setRequestHeader('Content-type', 'application/json');
+    // xhr.setRequestHeader('Access-Control-Allow-Origin','*');
+    // xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET,POST,PUT');
     xhr.responseType = 'json';
     xhr.onload =() => {
       resolve(xhr.response);
     }
-    xhr.send();    
+    xhr.send(body);    
   });
   return promise;
 };
